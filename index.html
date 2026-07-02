@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Semantic HTML Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0; }
+        header, main, footer { padding: 16px; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 12px; flex-wrap: wrap; }
+        nav a { text-decoration: none; }
+        section { margin-top: 24px; }
+        img { max-width: 100%; height: auto; display: block; margin-top: 12px; }
+        form { display: grid; gap: 12px; max-width: 520px; }
+        label { font-weight: 600; display: block; margin-bottom: 4px; }
+        input, textarea { width: 100%; padding: 10px; }
+        button { width: fit-content; padding: 10px 14px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Basics & Semantics</h1>
+
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main aria-label="Main content">
+
+        <section id="about">
+            <h2>About This Website</h2>
+
+            <p>
+                This page demonstrates semantic HTML using header, navigation,
+                main content, sections, articles, and a footer.
+            </p>
+
+            <img
+                src="./html.png"
+                alt="An HTML-themed illustration with the text HTML">
+        </section>
+
+        <section id="articles">
+            <h2>Latest Articles</h2>
+
+            <article>
+                <h3>Why Semantic HTML Matters</h3>
+
+                <p>
+                    Semantic HTML improves accessibility, SEO, and makes code
+                    easier to understand and maintain.
+                </p>
+            </article>
+
+            <article>
+                <h3>Benefits of Accessible Forms</h3>
+
+                <p>
+                    Proper labels, headings, and meaningful HTML elements create
+                    a better experience for everyone.
+                </p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
